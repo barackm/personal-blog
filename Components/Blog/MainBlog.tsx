@@ -24,7 +24,7 @@ const MainBlog = () => {
         </div>
         <Link href='/blog/[slug]' as='/blog/hello-world'>
           <a className='flex flex-col  my-5 '>
-            <h2 className='text-2xl md:text-5xl transition font-normal hover:text-secondary md:w-2/3'>
+            <h2 className='text-2xl md:text-5xl transition font-normal hover:text-secondary md:w-3/4'>
               The Let Me List Them Out For You Headlines Are Here.
             </h2>
           </a>

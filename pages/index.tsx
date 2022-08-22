@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       `}
         >
           <div className='flex mb-10'>
-            <h1 className='text-left text-5xl md:text-7xl font-bold'>
+            <h1 className='text-left text-5xl md:text-8xl font-semibold'>
               The Blog
             </h1>
           </div>
