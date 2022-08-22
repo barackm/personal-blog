@@ -15,8 +15,15 @@ module.exports = {
       primary: '#0e1630',
       secondary: '#ed4a4a',
       text: '#fff',
+      mainWhite: '#e4e6ec',
+      texLight: '#94a3b8',
     },
-    extend: {},
+    extend: {
+      transitionProperty: {
+        default:
+          'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
+      },
+    },
   },
   plugins: [],
 };
