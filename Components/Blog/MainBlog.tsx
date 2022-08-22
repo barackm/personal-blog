@@ -6,8 +6,13 @@ const MainBlog = () => {
   return (
     <div className='flex flex-col mb-10 md:flex-row'>
       <Link href='/blog/[slug]' as='/blog/hello-world'>
-        <a className='flex relative h-96 flex-col w-full md:flex-row md:w-1/2 rounded-lg mr-5 md:mr-5 overflow-hidden'>
-          <Image src='/images/article1.jpg' alt='article image' layout='fill' />
+        <a className='flex relative h-72 md:h-96 flex-col w-full md:flex-row md:w-1/2 rounded-lg mr-5 md:mr-5 overflow-hidden'>
+          <Image
+            className='object-cover'
+            src='/images/article1.jpg'
+            alt='article image'
+            layout='fill'
+          />
         </a>
       </Link>
 

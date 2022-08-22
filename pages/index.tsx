@@ -5,11 +5,10 @@ import { BlogList } from '../Components/Blog/BlogList';
 import MainBlog from '../Components/Blog/MainBlog';
 import styles from '../styles/Home.module.css';
 
-// use tailwindcss to style the page
 const Home: NextPage = () => {
   return (
     <div className={`${styles.container}`}>
-      <main className='p-5 md:p-16'>
+      <main className='p-5 sm:p-[2rem] lg:p-[8rem] lg:pt-20'>
         <section
           className={`${styles.header}
         flex flex-col
