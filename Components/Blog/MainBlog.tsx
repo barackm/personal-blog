@@ -23,11 +23,11 @@ const MainBlog = () => {
           </span>
         </div>
         <Link href='/blog/[slug]' as='/blog/hello-world'>
-          <a className='flex flex-col  my-5 '>
-            <h2 className='text-2xl md:text-5xl transition font-normal hover:text-secondary md:w-3/4'>
-              The Let Me List Them Out For You Headlines Are Here.
-            </h2>
-          </a>
+          {/* <a className='flex flex-col  my-5 '> */}
+          <h2 className='text-2xl md:text-5xl transition font-normal hover:text-secondary md:w-3/4'>
+            The Let Me List Them Out For You Headlines Are Here.
+          </h2>
+          {/* </a> */}
         </Link>
         <div className='flex flex-col'>
           <p className='text-base md:text-lg font-normal'>

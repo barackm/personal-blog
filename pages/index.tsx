@@ -3,12 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { BlogList } from '../Components/Blog/BlogList';
 import MainBlog from '../Components/Blog/MainBlog';
+import Page from '../Components/Page/Page';
 import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
     <div className={`${styles.container}`}>
-      <main className='p-5 sm:p-[2rem] lg:p-[8rem] lg:pt-20'>
+      <Page>
         <section
           className={`${styles.header}
         flex flex-col
@@ -24,7 +25,7 @@ const Home: NextPage = () => {
         <section className={styles.main}>
           <BlogList />
         </section>
-      </main>
+      </Page>
     </div>
   );
 };
