@@ -18,20 +18,27 @@ const index = () => {
         </div>
         <div className='flex-col mt-5 px-32'>
           <div className=''>
-            <span className='text-sm md:text-base font-bold text-texLight'>
+            <span className='text-sm md:text-base font-medium text-texLight'>
               March 20, 2020
             </span>
           </div>
           <div>
-            <h3 className='text-2xl md:text-5xl transition font-semibold hover:text-secondary md:w-2/3 my-2 cursor-pointer'>
-              The Let Me List Them Out For You Headlines Are Here.
+            <h3 className='text-2xl md:text-5xl transition font-semibold hover:text-secondary md:w-2/3 my-10 cursor-pointer'>
+              The Let Me List Them Out For You{' '}
+              <span className='text-2xl md:text-5xl inline font-normal text-secondary cursor-pointer'>
+                #Headlines
+              </span>{' '}
+              Are Here.
             </h3>
           </div>
-          <div className='flex flex-col my-5 text-lg'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem non
-            sequi, amet tenetur repellat et nisi harum dolorem odit voluptate,
-            fuga repellendus nulla. Ut eum sunt expedita saepe aspernatur
-            voluptates tenetur tempore a, beatae dolor consequatur facere libero
+          <div className=' my-5 text-lg'>
+            <span className='inline  md:text-lg font-normal text-secondary cursor-pointer'>
+              # Lorem ipsum
+            </span>{' '}
+            dolor sit amet consectetur adipisicing elit. Quidem non sequi, amet
+            tenetur repellat et nisi harum dolorem odit voluptate, fuga
+            repellendus nulla. Ut eum sunt expedita saepe aspernatur voluptates
+            tenetur tempore a, beatae dolor consequatur facere libero
             consequuntur voluptatibus debitis, hic non tempora sequi nihil
             repudiandae asperiores ducimus deserunt. <br /> <br /> Illum, porro
             nihil nostrum autem, excepturi officia quas distinctio reiciendis,
