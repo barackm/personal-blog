@@ -16,13 +16,17 @@
     "@tiptap/extension-document": "^2.0.0-beta.17",
     "@tiptap/extension-highlight": "^2.0.0-beta.35",
     "@tiptap/extension-paragraph": "^2.0.0-beta.26",
+    "@tiptap/extension-placeholder": "^2.0.0-beta.53",
     "@tiptap/extension-text": "^2.0.0-beta.17",
     "@tiptap/extension-typography": "^2.0.0-beta.22",
     "@tiptap/react": "^2.0.0-beta.114",
     "@tiptap/starter-kit": "^2.0.0-beta.191",
+    "axios": "^0.27.2",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-toastify": "^9.0.8",
+    "sass": "^1.54.5"
   },
   "devDependencies": {
     "@types/node": "18.7.8",

@@ -1,31 +1,50 @@
-import { useEditor, EditorContent } from '@tiptap/react';
+import {
+  BubbleMenu,
+  EditorContent,
+  FloatingMenu,
+  useEditor,
+} from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Highlight from '@tiptap/extension-highlight';
+import Placeholder from '@tiptap/extension-placeholder';
 import Typography from '@tiptap/extension-typography';
-import Document from '@tiptap/extension-document';
-import Paragraph from '@tiptap/extension-paragraph';
-import Text from '@tiptap/extension-text';
-import { getEditorTopBarItems } from './utils';
-import Button from './Button';
+import InlineMenu from './InlineMenu';
+import styles from '../../styles/Editor.module.scss';
 
-const Editor = () => {
+type EditorProps = {
+  onChange: (content: any) => void;
+  value: any;
+  label?: string;
+  placeholder?: string;
+};
+
+const Editor = (props: EditorProps) => {
+  const { onChange, value, label, placeholder } = props;
   const editor = useEditor({
-    extensions: [StarterKit, Document, Paragraph, Text, Typography, Highlight],
-    content: '<p>Hello World! 🌎️</p>',
+    extensions: [StarterKit, Highlight, Typography],
+    content: value,
     onUpdate: (content: any) => {
-      console.log(content);
+      const { editor } = content;
+      onChange(editor);
     },
   });
-
   return (
     <div>
-      <EditorContent
-        editor={editor}
-        className='h-20 p-5'
-        onChange={(content) => {
-          console.log(content);
-        }}
-      />
+      <div>
+        <label className='block text-3xl font-medium mb-2'>{label}</label>
+      </div>
+      <div className={`${styles.editor}`}>
+        <EditorContent
+          editor={editor}
+          placeholder={placeholder}
+          // style={style}
+          onChange={(content) => {
+            console.log(content);
+          }}
+          autoFocus={true}
+        />
+      </div>
+      {/* <InlineMenu editor={editor} /> */}
     </div>
   );
 };
