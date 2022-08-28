@@ -1,6 +1,7 @@
 /* add all the default styles to support all the tags that can be used in a blog */
 
 $secondary-color: #ed4a4a;
+$primary-color: #0e1630;
 
 .blog-content-wrapper {
     h1 {
@@ -81,5 +82,17 @@ $secondary-color: #ed4a4a;
         padding: 0.1rem 0.4rem;
         border-radius: 0.1rem;
         // italic
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .blog-content-wrapper {
+        code {
+            background-color: lighten(#000, 20%);
+        }
+
+        pre {
+            background-color: lighten(#000, 20%);
+        }
     }
 }
