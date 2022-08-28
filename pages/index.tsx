@@ -27,7 +27,6 @@ const Home: NextPage = () => {
     getPosts();
   }, []);
 
-  console.log(posts);
   return (
     <div className={`${styles.container}`}>
       <Page>
