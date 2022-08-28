@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import parse from 'html-react-parser';
 import moment from 'moment';
 
 type BlogPostProps = {
@@ -10,13 +9,13 @@ type BlogPostProps = {
 
 const BlogItem = (props: BlogPostProps) => {
   const { post } = props;
-  const { published, title, updated, content } = post;
+  const { published, title, updated, content, id } = post;
   const parsedContent = content.replace(/<(?:.|\n)*?>/gm, '');
   const first20Words = parsedContent.split(' ').slice(0, 20).join(' ');
   const first20WordsWithDots = first20Words + '...';
 
   return (
-    <Link href='/blog/[slug]' as='/blog/hello-world'>
+    <Link href='/blog/[slug]' as={`/blog/${id}`}>
       <a className='flex  flex-col'>
         <div className='flex w-full'>
           <div className='flex w-full relative h-60  rounded-lg overflow-hidden'>

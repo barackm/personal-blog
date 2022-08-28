@@ -27,7 +27,6 @@ const Home: NextPage = () => {
     getPosts();
   }, []);
 
-  console.log(posts);
   return (
     <div className={`${styles.container}`}>
       <Page>
@@ -41,7 +40,7 @@ const Home: NextPage = () => {
               The Blog
             </h1>
           </div>
-          <MainBlog />
+          {posts.length > 0 && <MainBlog post={posts[0]} />}
         </section>
         <section className={styles.main}>
           <BlogList posts={posts} />
