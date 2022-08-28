@@ -27,6 +27,7 @@ const Home: NextPage = () => {
     getPosts();
   }, []);
 
+  console.log(posts);
   return (
     <div className={`${styles.container}`}>
       <Page>
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
           <MainBlog />
         </section>
         <section className={styles.main}>
-          <BlogList />
+          <BlogList posts={posts} />
         </section>
       </Page>
     </div>

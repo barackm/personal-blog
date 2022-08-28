@@ -1,18 +1,17 @@
 import React from 'react';
 import BlogItem from './BlogItem';
 
-export const BlogList = () => {
+type BlogPostList = {
+  posts: any;
+};
+
+export const BlogList = (props: BlogPostList) => {
+  const { posts } = props;
   return (
-    <div
-      // should display grid
-      className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'
-    >
-      <BlogItem />
-      <BlogItem />
-      <BlogItem />
-      <BlogItem />
-      <BlogItem />
-      <BlogItem />
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
+      {posts.map((post: any) => (
+        <BlogItem key={post.id} post={post} />
+      ))}
     </div>
   );
 };
