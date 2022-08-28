@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { BlogList } from '../Components/Blog/BlogList';
 import MainBlog from '../Components/Blog/MainBlog';
@@ -28,25 +29,27 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className={`${styles.container}`}>
-      <Page>
-        <section
-          className={`${styles.header}
+    <>
+      <div className={`${styles.container}`}>
+        <Page>
+          <section
+            className={`${styles.header}
         flex flex-col
       `}
-        >
-          <div className='flex mb-10'>
-            <h1 className='text-left text-5xl md:text-8xl font-semibold'>
-              The Blog
-            </h1>
-          </div>
-          {posts.length > 0 && <MainBlog post={posts[0]} />}
-        </section>
-        <section className={styles.main}>
-          <BlogList posts={posts} />
-        </section>
-      </Page>
-    </div>
+          >
+            <div className='flex mb-10'>
+              <h1 className='text-left text-5xl md:text-8xl font-semibold'>
+                The Blog
+              </h1>
+            </div>
+            {posts.length > 0 && <MainBlog post={posts[0]} />}
+          </section>
+          <section className={styles.main}>
+            <BlogList posts={posts} />
+          </section>
+        </Page>
+      </div>
+    </>
   );
 };
 
