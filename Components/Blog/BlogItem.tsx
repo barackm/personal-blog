@@ -35,7 +35,7 @@ const BlogItem = (props: BlogPostProps) => {
               {moment(published).format('MMMM Do YYYY')}
             </span>
           </div>
-          <Link href='/blog/[slug]' as='/blog/hello-world'>
+          <Link href='/blog/[slug]' as={`/blog/${id}`}>
             <h3 className='text-2xl md:text-xl transition font-bold hover:text-secondary md:w-2/3 my-2 '>
               {title}
             </h3>
