@@ -10,10 +10,12 @@ type BlogPostProps = {
 const BlogItem = (props: BlogPostProps) => {
   const { post } = props;
   const { published, title, updated, content, id } = post;
+  // remove img tags from content
   const parsedContent = content.replace(/<(?:.|\n)*?>/gm, '');
   const first20Words = parsedContent.split(' ').slice(0, 20).join(' ');
   const first20WordsWithDots = first20Words + '...';
 
+  console.log(content);
   return (
     <Link href='/blog/[slug]' as={`/blog/${id}`}>
       <a className='flex  flex-col'>
