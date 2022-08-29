@@ -1,8 +1,7 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
-import { BlogList } from '../Components/Blog/BlogList';
-import MainBlog from '../Components/Blog/MainBlog';
+import { BlogList } from '../Components/blog/BlogList';
+import MainBlog from '../Components/blog/MainBlog';
 import Page from '../Components/Page/Page';
 import http from '../services/http';
 import styles from '../styles/Home.module.css';
