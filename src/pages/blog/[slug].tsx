@@ -51,7 +51,7 @@ const PostDetails = () => {
                 />
               </div>
             </div>
-            <div className='flex-col mt-5 px-32'>
+            <div className='flex-col mt-5 px-0 pb-32 md:px-32'>
               <div className=''>
                 <span className='text-sm md:text-base font-medium text-texLight'>
                   {moment(published).format('MMMM Do YYYY')}
