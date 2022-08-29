@@ -44,11 +44,8 @@ const NewBlog = () => {
           </div>
         </div>
       </div>
-      {/* display pased html */}
       <div className='flex-col'>
-        <div className=''>
-          <div dangerouslySetInnerHTML={{ __html: title }} />
-        </div>
+        <div className=''></div>
       </div>
     </Page>
   );
