@@ -42,7 +42,7 @@ const PostDetails = () => {
         {post && (
           <div className='flex flex-col w-full'>
             <div className='flex w-full'>
-              <div className='relative h-[32rem] bg-secondary w-full rounded-md overflow-hidden'>
+              <div className='relative h-72 md:h-[32rem] w-full rounded-md overflow-hidden'>
                 <Image
                   src='/images/blog1.jpg'
                   alt='article image'

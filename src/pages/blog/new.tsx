@@ -15,7 +15,6 @@ const NewBlog = () => {
     setTitle(html);
   };
 
-  console.log(title);
   return (
     <Page>
       <div>
