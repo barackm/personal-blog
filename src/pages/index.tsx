@@ -43,21 +43,11 @@ const Home = (props: HomeProps) => {
 export default Home;
 
 export async function getServerSideProps() {
-  try {
-    const { data } = await http.get(`${API_URL}${blogId}/posts`);
-    const posts = data.items;
-    return {
-      props: {
-        posts,
-      },
-    };
-  } catch (error) {
-    console.log(error);
-  }
-
+  const { data } = await http.get(`${API_URL}${blogId}/posts`);
+  const posts = data.items;
   return {
     props: {
-      posts: [],
+      posts,
     },
   };
 }
