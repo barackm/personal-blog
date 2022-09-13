@@ -9,24 +9,12 @@ import { API_URL, BLOG_ID } from '../utils/constants';
 
 const blogId = BLOG_ID;
 
-const Home: NextPage = () => {
-  const [fetching, setFetching] = useState(false);
-  const [posts, setPosts] = useState([]);
-  const getPosts = async () => {
-    setFetching(true);
-    try {
-      const { data } = await http.get(`${API_URL}${blogId}/posts`);
-      setPosts(data.items);
-      setFetching(false);
-    } catch (error) {
-      console.log(error);
-      setFetching(false);
-    }
-  };
-  useEffect(() => {
-    getPosts();
-  }, []);
+type HomeProps = {
+  posts: any;
+};
 
+const Home = (props: HomeProps) => {
+  const { posts } = props;
   return (
     <>
       <div className={`${styles.container}`}>
@@ -53,3 +41,23 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getServerSideProps() {
+  try {
+    const { data } = await http.get(`${API_URL}${blogId}/posts`);
+    const posts = data.items;
+    return {
+      props: {
+        posts,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+  }
+
+  return {
+    props: {
+      posts: [],
+    },
+  };
+}
