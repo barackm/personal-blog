@@ -1,11 +1,11 @@
 import React from 'react';
-import BlogItem from './BlogItem';
+import BlogItem from './BlogPost';
 
 type BlogPostList = {
   posts: any;
 };
 
-const BlogList = (props: BlogPostList) => {
+const BlogPosts = (props: BlogPostList) => {
   const { posts } = props;
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10'>
@@ -16,4 +16,4 @@ const BlogList = (props: BlogPostList) => {
   );
 };
 
-export default BlogList;
+export default BlogPosts;

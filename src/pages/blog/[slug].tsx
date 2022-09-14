@@ -1,36 +1,20 @@
 import Image from 'next/image';
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
 import moment from 'moment';
 import parse from 'html-react-parser';
+import Head from 'next/head';
+
 import Page from '../../Components/Page/Page';
 import { API_URL, BLOG_ID } from '../../utils/constants';
 import http from '../../services/http';
-import Head from 'next/head';
 
-const PostDetails = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [fetching, setFetching] = React.useState(false);
-  const [post, setPost] = React.useState<any>(null);
+interface PostDetailsProps {
+  post: any;
+}
 
-  const getPost = async () => {
-    setFetching(true);
-    try {
-      const { data } = await http.get(`${API_URL}${BLOG_ID}/posts/${slug}`);
-      setPost(data);
-      setFetching(false);
-    } catch (error) {
-      console.log(error);
-      setFetching(false);
-    }
-  };
-
-  useEffect(() => {
-    getPost();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [slug]);
-  const { published, title, updated, content, id } = post || {};
+const PostDetails = (props: PostDetailsProps) => {
+  const { post } = props;
+  const { published, title, content } = post || {};
   const parsedContent = parse(content || '');
 
   return (
@@ -74,3 +58,27 @@ const PostDetails = () => {
 };
 
 export default PostDetails;
+
+export async function getStaticPaths() {
+  const { data } = await http.get(`${API_URL}${BLOG_ID}/posts`);
+  const posts = data.items;
+
+  const paths = posts.map((post: any) => ({
+    params: { slug: post.id },
+  }));
+
+  return { paths, fallback: false };
+}
+const loadPosts = async (slug: string) => {
+  const { data } = await http.get(`${API_URL}${BLOG_ID}/posts/${slug}`);
+  return data;
+};
+
+export async function getStaticProps({ params }: any) {
+  const post = await loadPosts(params.slug);
+  return {
+    props: {
+      post,
+    },
+  };
+}

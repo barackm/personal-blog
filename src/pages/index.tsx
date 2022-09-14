@@ -1,6 +1,4 @@
-import type { NextPage } from 'next';
-import { useEffect, useState } from 'react';
-import BlogList from '../Components/blog/BlogList';
+import BlogList from '../Components/blog/BlogPosts';
 import MainBlog from '../Components/blog/MainBlog';
 import Page from '../Components/Page/Page';
 import http from '../services/http';
