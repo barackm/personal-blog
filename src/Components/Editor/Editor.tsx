@@ -38,9 +38,7 @@ const Editor = (props: EditorProps) => {
           editor={editor}
           placeholder={placeholder}
           // style={style}
-          onChange={(content) => {
-            console.log(content);
-          }}
+          onChange={(content) => {}}
           autoFocus={true}
         />
       </div>

@@ -9,18 +9,18 @@ type BlogPostProps = {
 
 const BlogPost = (props: BlogPostProps) => {
   const { post } = props;
-  const { published, title, content, id } = post;
+  const { title, modifiedAt, content, mainImageUrl, slug } = post;
   const parsedContent = content.replace(/<(?:.|\n)*?>/gm, '');
   const first20Words = parsedContent.split(' ').slice(0, 20).join(' ');
   const first20WordsWithDots = first20Words + '...';
 
   return (
-    <Link href='/blog/[slug]' as={`/blog/${id}`}>
+    <Link href='/blog/[slug]' as={`/blog/${slug}`}>
       <a className='flex  flex-col'>
         <div className='flex w-full'>
           <div className='flex w-full relative h-60  rounded-lg overflow-hidden'>
             <Image
-              src='/images/blog1.jpg'
+              src={mainImageUrl || '/images/blog1.jpg'}
               alt='article image'
               layout='fill'
               className='object-cover'
@@ -30,10 +30,11 @@ const BlogPost = (props: BlogPostProps) => {
         <div className='flex flex-col mt-5'>
           <div className=''>
             <span className='text-sm md:text-base font-bold text-texLight'>
-              {moment(published).format('MMMM Do YYYY')}
+              {moment(modifiedAt).format('MMMM Do YYYY')}{' '}
+              {modifiedAt && <span>Edited</span>}
             </span>
           </div>
-          <Link href='/blog/[slug]' as={`/blog/${id}`}>
+          <Link href='/blog/[slug]' as={`/blog/${slug}`}>
             <h3 className='text-2xl md:text-xl transition font-bold hover:text-secondary md:w-2/3 my-2 '>
               {title}
             </h3>

@@ -1,0 +1,35 @@
+export interface IArticle {
+  _id: '6396563bb3f1d53ebdea01ef';
+  title: 'My journey with software development';
+  authorId: '6361433d90a852b0cf97179d';
+  slug: '6396563bb3f1d53ebdea01ee';
+  content: '<p>There are four main things that helped me become a better developer today. patience, believing that I can do it, the ability to communicate my ideas to others, and of course, loving what I do.</p><p>3 years ago I couldn’t be able to answer the question “Who is a web developer? ” or “What is even programming? ”, it was even complicated to understand what is a website.</p><p><br></p><p>There are four things that helped me become a better developer, and the most important were patience, believing in myself by saying, “Well why not me? If others can do it? ”.</p><p>Patience was something very important in my journey with software development, I knew what is programming after I finished my secondary studies, and it was quite interesting and so complicated at the same time, trying the same thing over and over again to understand very simple concepts. During this period I would’ve abandoned, but I got the patience because I was focusing more on what would happen after I succeed than how it seems to be difficult at first, which strengthened me and helped me move forward and always learn.</p><p><img src="https://cdn-images-1.medium.com/max/800/0*VDUs8Nh1noIYW4Xt">Photo by <a href="https://unsplash.com/@tyler_milligan_visuals?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Tyler Milligan</a> on&nbsp;<a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Unsplash</a></p><p><br></p><p>Believing that I can be successful, believing that I too I can do something, that me too I can learn and become even better also helped me become a better developer. challenges are always there and the only thing that can help us face these challenges is to believe that we can go beyond them, and thus work hard, as Denzel Washington said:</p><blockquote>“Working really hard, is what successful people do<em>.</em>”</blockquote><p><br></p><p>So believing that I could be able to do something was not enough, I was also working hard for that.</p><p>One of the things I love is to help some who needs help, and this has played a very big and important role in my journey with software development, it was always a pleasure sharing what I knew or explain my code to my Stand Up team while learning Software development at Microverse, because I felt comfortable and I loved what I was doing.</p><p><br></p><p><img src="https://cdn-images-1.medium.com/max/800/0*4l3dOFcnsx5enAkf">Photo by <a href="https://unsplash.com/@mimithian?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Mimi Thian</a> on&nbsp;<a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Unsplash</a></p><p>So when I commit myself to something I want to know, I always take into consideration the fact that I love what I want to do first, believe that I can take it up to the end by working hard, and always be happy to share what I love and what I know with others.</p>';
+  tags: ['Web Development'];
+  modifiedAt: '2022-12-11T22:17:27.432Z';
+  isPublished: true;
+  draft: '<p>There are four main things that helped me become a better developer today. patience, believing that I can do it, the ability to communicate my ideas to others, and of course, loving what I do.</p><p>3 years ago I couldn’t be able to answer the question “Who is a web developer? ” or “What is even programming? ”, it was even complicated to understand what is a website.</p><p><br></p><p>There are four things that helped me become a better developer, and the most important were patience, believing in myself by saying, “Well why not me? If others can do it? ”.</p><p>Patience was something very important in my journey with software development, I knew what is programming after I finished my secondary studies, and it was quite interesting and so complicated at the same time, trying the same thing over and over again to understand very simple concepts. During this period I would’ve abandoned, but I got the patience because I was focusing more on what would happen after I succeed than how it seems to be difficult at first, which strengthened me and helped me move forward and always learn.</p><p><img src="https://cdn-images-1.medium.com/max/800/0*VDUs8Nh1noIYW4Xt">Photo by <a href="https://unsplash.com/@tyler_milligan_visuals?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Tyler Milligan</a> on&nbsp;<a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Unsplash</a></p><p><br></p><p>Believing that I can be successful, believing that I too I can do something, that me too I can learn and become even better also helped me become a better developer. challenges are always there and the only thing that can help us face these challenges is to believe that we can go beyond them, and thus work hard, as Denzel Washington said:</p><blockquote>“Working really hard, is what successful people do<em>.</em>”</blockquote><p><br></p><p>So believing that I could be able to do something was not enough, I was also working hard for that.</p><p>One of the things I love is to help some who needs help, and this has played a very big and important role in my journey with software development, it was always a pleasure sharing what I knew or explain my code to my Stand Up team while learning Software development at Microverse, because I felt comfortable and I loved what I was doing.</p><p><br></p><p><img src="https://cdn-images-1.medium.com/max/800/0*4l3dOFcnsx5enAkf">Photo by <a href="https://unsplash.com/@mimithian?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Mimi Thian</a> on&nbsp;<a href="https://unsplash.com?utm_source=medium&amp;utm_medium=referral" rel="noopener noreferrer" target="_blank">Unsplash</a></p><p>So when I commit myself to something I want to know, I always take into consideration the fact that I love what I want to do first, believe that I can take it up to the end by working hard, and always be happy to share what I love and what I know with others.</p>';
+  createdAt: '2022-12-11T22:14:19.543Z';
+  __v: 2;
+  publishedAt: '2022-12-11T22:17:27.146Z';
+  scheduledAt: null;
+  author: {};
+}
+
+export interface IAuthor {
+  _id: '6361433d90a852b0cf97179d';
+  firstName: 'Baraka';
+  lastName: 'Mukelenga';
+  email: 'barackmukelenga100@gmail.com';
+  roles: [
+    '6334af4da79f5e620267e970',
+    '6334ab987be47e975bc5a959',
+    '6334ac317be47e975bc5a95b',
+  ];
+  avatarUrl: 'https://res.cloudinary.com/barackm/image/upload/v1670686824/personal-portfolio/sbsyihvu9t35o0afxs6t.jpg';
+  status: 'active';
+  verificationToken: null;
+  isVerified: true;
+  createdAt: '2022-11-01T16:03:09.357Z';
+  resetPasswordExpires: null;
+  resetPasswordToken: null;
+}

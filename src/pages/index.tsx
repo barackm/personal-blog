@@ -3,9 +3,7 @@ import MainBlog from '../Components/blog/MainBlog';
 import Page from '../Components/Page/Page';
 import http from '../services/http';
 import styles from '../styles/Home.module.css';
-import { API_URL, BLOG_ID } from '../utils/constants';
-
-const blogId = BLOG_ID;
+import { API_URL } from '../utils/constants';
 
 type HomeProps = {
   posts: any;
@@ -13,6 +11,7 @@ type HomeProps = {
 
 const Home = (props: HomeProps) => {
   const { posts } = props;
+
   return (
     <>
       <div className={`${styles.container}`}>
@@ -41,8 +40,8 @@ const Home = (props: HomeProps) => {
 export default Home;
 
 export async function getServerSideProps() {
-  const { data } = await http.get(`${API_URL}${blogId}/posts`);
-  const posts = data.items;
+  const { data } = await http.get(`${API_URL}articles/blog`);
+  const posts = data;
   return {
     props: {
       posts,

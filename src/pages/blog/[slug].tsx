@@ -60,17 +60,17 @@ const PostDetails = (props: PostDetailsProps) => {
 export default PostDetails;
 
 export async function getStaticPaths() {
-  const { data } = await http.get(`${API_URL}${BLOG_ID}/posts`);
-  const posts = data.items;
-
+  const { data } = await http.get(`${API_URL}articles/blog`);
+  const posts = data;
   const paths = posts.map((post: any) => ({
-    params: { slug: post.id },
+    params: { slug: post.slug },
   }));
 
   return { paths, fallback: false };
 }
+
 const loadPosts = async (slug: string) => {
-  const { data } = await http.get(`${API_URL}${BLOG_ID}/posts/${slug}`);
+  const { data } = await http.get(`${API_URL}articles/slug/${slug}`);
   return data;
 };
 
