@@ -14,7 +14,6 @@ const MainBlog = (props: MainBlogProps) => {
   const first20Words = parsedContent.split(' ').slice(0, 40).join(' ');
   const first20WordsWithDots = first20Words + '...';
 
-  console.log(post);
   return (
     <div className='flex flex-col mb-10 md:flex-row'>
       <Link href='/blog/[slug]' as={`/blog/${slug}`}>
