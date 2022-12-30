@@ -14,7 +14,7 @@ interface PostDetailsProps {
 
 const PostDetails = (props: PostDetailsProps) => {
   const { post } = props;
-  const { published, title, content } = post || {};
+  const { published, title, content, mainImageUrl } = post || {};
   const parsedContent = parse(content || '');
 
   return (
@@ -28,7 +28,7 @@ const PostDetails = (props: PostDetailsProps) => {
             <div className='flex w-full'>
               <div className='relative h-72 md:h-[32rem] w-full rounded-md overflow-hidden'>
                 <Image
-                  src='/images/blog1.jpg'
+                  src={mainImageUrl}
                   alt='article image'
                   layout='fill'
                   className='object-cover w-full'
